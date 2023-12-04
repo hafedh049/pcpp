@@ -10,5 +10,6 @@ class Test:
         self.__private_attribute
 
 
+# Creation of an instance with type hinting
 test: Test = Test()
 print(test._protected_attribute)
