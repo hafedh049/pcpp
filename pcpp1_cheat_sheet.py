@@ -3,11 +3,11 @@ class Test:
         # Define a protected instance attribute starts
         # with single _ it can be called outside the object
         # and its subclasses
-        self._protected_attribute
+        self._protected_attribute = 5
 
         # Private attributes start with double __ and it can' be
         # called directly from outside the object
-        self.__private_attribute
+        self.__private_attribute = 10
 
 
 # Creation of an instance with type hinting
