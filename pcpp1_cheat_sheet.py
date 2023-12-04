@@ -8,3 +8,6 @@ class Test:
         # Private attributes start with double __ and it can' be
         # called directly from outside the object
         self.__private_attribute
+
+
+test: Test = Test()
