@@ -11,3 +11,4 @@ class Test:
 
 
 test: Test = Test()
+print(test._protected_attribute)
