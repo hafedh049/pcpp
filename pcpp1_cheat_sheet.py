@@ -4,7 +4,6 @@ class Test:
         # with single _ it can be called outside the class
         # and its subclasses
         self._protected_attribute
-        # Define a protected instance attribute starts
-        # with single _ it can be called outside the class
-        # and its subclasses
-        self._protected_attribute
+
+        #
+        self.__private_attribute
