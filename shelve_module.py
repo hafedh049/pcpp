@@ -6,3 +6,7 @@ with shelve.open("test") as shelvi:
 
 with shelve.open("test") as shelvi:
     print(shelvi["username"])
+
+"""
+shelve is a module in python that acts like dictionnary but it is persistent it means that
+"""
