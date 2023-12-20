@@ -73,6 +73,14 @@ class Duck:
     def walk(self):
         pass
 
+    def walk(self, a):
+        pass
+
+    """
+    tnajem thot comment w texecuti code kima print w tnajm thot nafs el method kima hia martin wial akther
+    maghir maysir hata error
+    """
+
     def quack(self):
         return print("Quack")
 
