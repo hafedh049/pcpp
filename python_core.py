@@ -140,5 +140,36 @@ Diamond
 """
 # ------------------------------------------------------------------------------------------------------------------------------------------
 """
+The ambiguity that arises here is caused by the fact that class B and class C are inherited from superclass A, and class D is inherited from both classes B and C. If you want to call the method info(), which part of the code would be executed then?
 
+Python lets you implement such a class hierarchy. Can you guess the output of the code?
+
+class A:
+    def info(self):
+        print('Class A')
+
+class B(A):
+    def info(self):
+        print('Class B')
+
+class C(A):
+    def info(self):
+        print('Class C')
+
+class D(B, C):
+    pass
+
+D().info()
+
+
+In the multiple inheritance scenario, any specified attribute is searched for first in the current class. If it is not found, the search continues into the direct parent classes in depth-first level (the first level above), from the left to the right, according to the class definition. This is the result of the MRO algorithm.
+
+In our case:
+
+class D does not define the method info(), so Python has to look for it in the class hierarchy;
+class D is constructed in this order:
+the definition of class B is fetched;
+the definition of class C is fetched;
+
+DRAW THE DFS AND APPLY THE DIAMOND
 """
