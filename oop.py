@@ -153,3 +153,25 @@ print(Demo.__dict__)
 -> najmou nista3mlohom mithel bch na3mlou tracking lil number of instances created
 -> all class variables are shared by all class instances (ya3ni tnajm tnadih ml instance zeda) ama makch bch tilgeh fl __dict__ 5atrou mahouwa tabe3 lil instance
 """
+
+
+class Demo:
+    class_var = "shared variable"
+
+
+d1 = Demo()
+d2 = Demo()
+
+print(Demo.class_var)
+print(d1.class_var)
+print(d2.class_var)
+
+print("contents of d1:", d1.__dict__)
+
+"""
+When you want to set or change a value of the class variable, you should access it via the class, but not the class instance, as you can do for reading.
+
+When you try to set a value for the class variable using the object (a variable referring to the object or self keyword) but not the class, you are creating an instance variable that holds the same name as the class variable. The following snippet shows such a case – remember this in order to avoid wasting time hunting for bugs!
+"""
+
+# ---------------------------------------------------------------------
