@@ -101,3 +101,10 @@ print(duckling.walk.__class__)
 <class 'str'>
 <class 'method'>
 """
+# ----------------------------------------
+"""
+Instance variables
+This kind of variable exists when and only when it is explicitly created and added to an object. This can be done during the object's initialization, performed by the __init__ method, or later at any moment of the object's life. Furthermore, any existing property can be removed at any time.
+
+Each object carries its own set of variables – they don't interfere with one another in any way. The word instance suggests that they are closely connected to the objects (which are class instances), not to the classes themselves. To get access to the instance variable, you should address the variable in the following way: objectdotvariable_name.
+"""
