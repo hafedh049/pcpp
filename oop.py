@@ -56,5 +56,9 @@ Object: more general that instance, object treferi l particular instance of a cl
 -> fl memory titsama instance, w fl code titsama object
 -> 1 class give unlimited instances (oo)
 -> kol instance 3andha el state el 5as beha ofc (fl code houwa el variables wl objects)
-
 """
+# --------------------------------------------------------
+"""
+Ay class yextendi ml 'type' hak aleh ki tji tchouf fl type ta3 class tilgeh 'type'
+"""
+print(type(Animal))
