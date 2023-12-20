@@ -115,3 +115,30 @@ Each subclass is more specialized (or more specific) than its superclass. Conver
 """
 
 # ------------------------------------------------------------------------------------------------------------------------------
+
+"""
+Inheritance and polymorphism — Single inheritance vs. multiple inheritance
+There are no obstacles to using multiple inheritance in Python. You can derive any new class from more than one previously defined class.
+
+But multiple inheritance should be used with more prudence than single inheritance because:
+
+a single inheritance class is always simpler, safer, and easier to understand and maintain;
+multiple inheritance may make method overriding somewhat tricky; moreover, using the super() function can lead to ambiguity;
+it is highly probable that by implementing multiple inheritance you are violating the single responsibility principle;
+If your solution tends to require multiple inheritance, it might be a good idea to think about implementing composition.
+
+
+MRO — Method Resolution Order
+The spectrum of issues possibly coming from multiple inheritance is illustrated by a classical problem named the diamond problem, or even the deadly diamond of death. The name reflects the shape of the inheritance diagram — take a look at the picture.
+
+There is the top-most superclass named A;
+there are two subclasses derived from A — B and C;
+and there is also the bottom-most subclass named D, derived from B and C (or C and B, as these two variants mean different things in Python)
+Can you see the diamond there?
+
+Diamond
+"""
+# ------------------------------------------------------------------------------------------------------------------------------------------
+"""
+
+"""
