@@ -150,5 +150,6 @@ print(Demo.__dict__)
 """
 -> el dict fih el entities lkol ta3 el class kima el attribute __module__ eli ki teprintih fi nafs el fichier eli tisna3 feha l classe ta3tik __main__ sinon taatik ism el fichier(module)
 -> attribute 'class_var':... houwa key value pair ta3 el class variable
-
+-> najmou nista3mlohom mithel bch na3mlou tracking lil number of instances created
+-> all class variables are shared by all class instances (ya3ni tnajm tnadih ml instance zeda) ama makch bch tilgeh fl __dict__ 5atrou mahouwa tabe3 lil instance
 """
