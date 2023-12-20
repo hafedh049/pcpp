@@ -51,5 +51,5 @@ class Cat(Animal):
 # -------------------------------------------------------
 """
 Class: Yfaser an idea, houwa blueprint lil instance
-Instance:
+Instance: hia physical instantiation lil class fl memory hedhi eli treferilha el 'self'
 """
