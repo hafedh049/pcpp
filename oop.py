@@ -85,3 +85,10 @@ print(Duck.__class__)
 print(duckling.__class__)
 print(duckling.sex.__class__)
 print(duckling.quack.__class__)
+
+"""
+<class 'type'>
+<class '__main__.Duck'>
+<class 'str'>
+<class 'method'>
+"""
