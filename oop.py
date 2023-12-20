@@ -46,3 +46,10 @@ class Cat(Animal):
     @override
     def speak():
         print("Meow")
+
+
+# -------------------------------------------------------
+"""
+Class: Yfaser an idea, houwa blueprint lil instance
+Instance:
+"""
