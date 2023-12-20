@@ -73,12 +73,12 @@ class Duck:
     def walk(self):
         pass
 
-    def walk(self, a):
+    def walk(self):
         pass
 
     """
     tnajem thot comment w texecuti code kima print w tnajm thot nafs el method kima hia martin wial akther
-    maghir maysir hata error
+    maghir maysir hata error hata el oveloading yimchi lina
     """
 
     def quack(self):
@@ -93,6 +93,7 @@ print(Duck.__class__)
 print(duckling.__class__)
 print(duckling.sex.__class__)
 print(duckling.quack.__class__)
+print(duckling.walk.__class__)
 
 """
 <class 'type'>
