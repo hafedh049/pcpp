@@ -133,3 +133,22 @@ print("contents of d2:", d2.__dict__)
 # ----------------------------------------------------------
 
 "instance variable mayithatou fl dict ken maysirlhom el appel w tantque el init hia theni dunder(magic) method ysirlha el appel implicitement ba3ed el 'NEW' donc bch yitsan3ou el vars w bch yithatou dl __dict__ wial kif tajoutehom ba3ed explictly kima x.a = 5"
+
+# -------------------------------------------------------------
+
+# Class variables
+# Class variables are defined within(outside init) the class construction, so these variables are available before any class instance is created. To get access to a class variable, simply access it using the class name, and then provide the variable name.
+
+
+class Demo:
+    class_var = "shared variable"
+
+
+print(Demo.class_var)
+print(Demo.__dict__)
+
+"""
+-> el dict fih el entities lkol ta3 el class kima el attribute __module__ eli ki teprintih fi nafs el fichier eli tisna3 feha l classe ta3tik __main__ sinon taatik ism el fichier(module)
+-> attribute 'class_var':... houwa key value pair ta3 el class variable
+
+"""
