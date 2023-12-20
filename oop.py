@@ -227,3 +227,11 @@ for poultry in duckling, drake, hen, chicken:
         poultry.quack()
     elif poultry.species == "chicken":
         poultry.cluck()
+
+"""
+So many ducks were born: 3
+duck quacks
+duck quacks
+duck quacks
+chicken clucks
+"""
