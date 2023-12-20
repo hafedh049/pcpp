@@ -52,4 +52,8 @@ class Cat(Animal):
 """
 Class: Yfaser an idea, houwa blueprint lil instance
 Instance: hia physical instantiation lil class fl memory hedhi eli treferilha el 'self'
+Object: more general that instance, object treferi l particular instance of a class
+-> fl memory titsama instance, w fl code titsama object
+-> 1 class give unlimited instances (oo)
+kol instance 3andha el state el 5as beha ofc (fl code houwa el variables wl objects)
 """
