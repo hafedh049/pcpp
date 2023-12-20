@@ -131,3 +131,5 @@ print("contents of d2:", d2.__dict__)
 # contents of d2: {'instance_var': 200}
 
 # ----------------------------------------------------------
+
+"instance variable mayithatou fl dict ken maysirlhom el appel w tantque el init hia theni dunder(magic) method ysirlha el appel implicitement ba3ed el 'NEW' donc bch yitsan3ou el vars w bch yithatou dl __dict__"
