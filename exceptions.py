@@ -15,3 +15,15 @@ Those attributes help the programmer to keep a reference to the original excepti
 """
 
 # -------------------------------------------
+
+"""
+
+Advanced exceptions - explicitly chained exceptions
+This time we'd like to convert an explicit type of exception object to another type of exception object at the moment when the second exception is occurring.
+
+Imagine that your code is responsible for the final checking process before the rocket is launched. The list of checks is a long one, and different checks could result in different exceptions.
+
+But as it is a very serious process, you should be sure that all checks are passed. If any fails, it should be marked in the log book and re-checked next time.
+"""
+
+# -------------------------------------------
