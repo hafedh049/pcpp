@@ -572,3 +572,56 @@ This concept has some interesting features:
 the code calling the proxy methods might not realize if it is "talking" to the real attributes or to the methods controlling access to the attributes;
 in Python, you can change your class implementation from a class that allows simple and direct access to attributes to a class that fully controls access to the attributes, and what is most important –consumer implementation does not have to be changed; by consumer we understand someone or something (it could be a legacy code) that makes use of your objects.
 """
+
+
+"""
+Python allows you to control access to attributes with the built-in property() function and corresponding decorator @property.
+
+This decorator plays a very important role:
+
+it designates a method which will be called automatically when another object wants to read the encapsulated attribute value;
+the name of the designated method will be used as the name of the instance attribute corresponding to the encapsulated attribute;
+it should be defined before the method responsible for setting the value of the encapsulated attribute, and before the method responsible for deleting the encapsulated attribute.
+Let's have look at the code in the editor.
+
+We see that every Tank class object has a __level attribute, and the class delivers the methods responsible for handling access to that attribute.
+
+The @property decorated method is a method to be called when some other code wants to read the level of liquid in our tank. We call such a read method getter.
+
+Pay attention to the fact that the method following the decorator gives the name (tank) to the attribute visible outside of the class. Moreover, we see that two other methods are named the same way, but as we are using specially crafted decorators to distinguish them, this won’t cause any problems:
+
+@tank.setter() – designates the method called for setting the encapsulated attribute value;
+@tank.deleter() – designates the method called when other code wants to delete the encapsulated attribute.
+
+"""
+
+
+class TankError(Exception):
+    pass
+
+
+class Tank:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.__level = 0
+
+    @property
+    def level(self):
+        return self.__level
+
+    @level.setter
+    def level(self, amount):
+        if amount > 0:
+            # fueling
+            if amount <= self.capacity:
+                self.__level = amount
+            else:
+                raise TankError("Too much liquid in the tank")
+        elif amount < 0:
+            raise TankError("Not possible to set negative liquid level")
+
+    @level.deleter
+    def level(self):
+        if self.__level > 0:
+            print("It is good to remember to sanitize the remains from the tank!")
+        self.__level = None
