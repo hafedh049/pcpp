@@ -112,3 +112,33 @@ In the case of inheritance, if the developer forgets to implement a specific met
 
 
 # --------------------------------------------------------------------
+
+"""
+Look at the code presented in the editor pane.
+
+Something that’s worth commenting on is that we have delivered:
+
+a static, dedicated method for checking argument types. As we have delegated this responsibility to only one method, the code will be shorter, cleaner and easier to maintain. We'll make use of this method a few times. In case the argument's type is not an integer, a ValueError exception is raised;
+an overridden method __setitem__, which is a magic method (mind the underscores) responsible for inserting (overwriting) an element at a given position. This method calls the check_value_type() method and later calls the genuine method __setitem__ which comes from the parent class, which does the rest of the job (sets the validated value at a given position). Now you can sigh – “oh, what a great ability!”
+an overridden method, append(), which is responsible for appending an element to the end of the list. This method follows the previous way of dealing with a new element;
+an overridden method, extend(), to verify and add a collection of elements to the object.
+What have we not delivered?
+
+All the remaining methods have remained unchanged, so our new list-like class will still behave like its parent in those places.
+To make our newly-created class fully functional, it’s necessary to deliver implementations for the methods:
+
+insert(index, object)
+__add__()
+These implementations should be fairly similar to the implementations delivered above (validate the type and then call the corresponding superclass method).
+"""
+
+
+# ---------------------------------------------------------------------
+
+"""
+Summary:
+Python allows you to subclass any built-in class such as a list, tuple, dictionary, and many others;
+by subclassing the built-ins, you can easily adapt generics to provide more sophisticated features;
+by subclassing the built-ins, you can modify only the parts (methods, attributes) that you intend to modify, while all remaining parts will behave as good old built-ins.
+
+"""
