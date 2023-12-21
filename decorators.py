@@ -23,3 +23,37 @@ thread synchronization;
 code refactorization;
 caching.
 """
+
+"""
+Function decorators
+Let's analyze some examples before we get down to the next dose of theory.
+
+So, let's create a function – simple_hello() is one of the simplest functions we could think of. We'll decorate it in a moment.
+
+def simple_hello():
+    print("Hello from simple function!")
+
+
+Now let's create another function, simple_decorator(), which is more interesting as it accepts an object as a parameter, displays a __name__ attribute value of the parameter, and returns an accepted object.
+
+def simple_decorator(function):
+    print('We are about to call "{}"'.format(function.__name__))
+    return function
+
+
+The last lines are responsible for both method invocations:
+
+decorated = simple_decorator(simple_hello)
+decorated()
+
+The whole code should look like the code presented in the right pane.
+
+When you run the code, the result should be:
+
+We are about to call "simple_hello"
+Hello from simple function!
+"""
+
+"""
+
+"""
