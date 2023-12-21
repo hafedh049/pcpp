@@ -625,3 +625,19 @@ class Tank:
         if self.__level > 0:
             print("It is good to remember to sanitize the remains from the tank!")
         self.__level = None
+
+
+"""
+As those attribute name repetitions could be misleading, let's explain the naming convention:
+
+the getter method is decorated with '@property'. It designates the name of the attribute to be used by the external code;
+the setter method is decorated with '@name.setter'. The method name should be the attribute name;
+the deleter method is decorated with '@name.deleter'. The method name should should be the attribute name.
+Let's instantiate the class and perform some operations on the object's attribute:
+
+As you can see, access to the __level attribute is handled by the designated methods by allowing the other code accessing the 'level' attribute. We can also react to operations when someone wants to break some constraints associated with the tank capacity.
+
+The other code can make use of the 'level' attribute in a convenient way, without even knowing about the logic hidden behind it. So, whenever you'd like to control access to an attribute, you should prepare dedicated properties, because properties control only designated attributes.
+
+It’s worth mentioning another useful and interesting feature of properties: properties are inherited, so you can call setters as if they were attributes.
+"""
