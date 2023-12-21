@@ -335,3 +335,16 @@ Instead of wrapping individual methods with function decorators, class decorator
 
 If we consider syntax, class decorators appear just before the 'class' instructions that begin the class definition (similar to function decorators, they appear just before the function definitions).
 """
+
+"""
+Decorators – summary
+A decorator is a very powerful and useful tool in Python, because it allows programmers to modify the behavior of a function, method, or class.
+
+Decorators allow us to wrap another callable object in order to extend its behavior.
+
+Decorators rely heavily on closures and *args and **kwargs.
+
+Interesting note:
+
+the idea of decorators was described in two documents – PEP 318 and PEP 3129. Don't be discouraged that the first PEP was prepared for Python 2, because what matters here is the idea, not the implementation in a specific Python.
+"""
