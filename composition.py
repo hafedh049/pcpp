@@ -29,3 +29,23 @@ The inheritance concept is a powerful one, but you should remember that with gre
 
 This hierarchy would be hard to understand, debug, and extend. This phenomenon is known as the class explosion problem, and is one of the antipatterns of programming.
 """
+# ---------------------------------
+
+"""
+Inheritance is not the only way of constructing adaptable objects. You can achieve similar goals by using a concept named composition.
+
+This concept models another kind of relation between objects; it models what is called a has a relation.
+
+Examples:
+
+a Laptop has a network card;
+a Hovercraft has a specific engine.
+Composition is the process of composing an object using other different objects. The objects used in the composition deliver a set of desired traits (properties and/or methods) so we can say that they act like blocks used to build a more complicated structure.
+
+
+It can be said that:
+
+inheritance extends a class's capabilities by adding new components and modifying existing ones; in other words, the complete recipe is contained inside the class itself and all its ancestors; the object takes all the class's belongings and makes use of them;
+composition projects a class as a container (called a composite) able to store and use other objects (derived from other classes) where each of the objects implements a part of a desired class's behavior. It’s worth mentioning that blocks are loosely coupled with the composite, and those blocks could be exchanged any time, even during program runtime.
+
+"""
