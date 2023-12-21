@@ -539,3 +539,20 @@ class GreenField(BluePrint):
 
 gf = GreenField()
 gf.hello()
+
+
+"""
+Multiple inheritance
+When you plan to implement a multiple inheritance from abstract classes, remember that an effective subclass should override all abstract methods inherited from its super classes.
+
+Summary:
+Abstract Base Class (ABC) is a class that cannot be instantiated. Such a class is a base class for concrete classes;
+ABC can only be inherited from;
+we are forced to override all abstract methods by delivering concrete method implementations.
+
+A note:
+
+It’s tempting to call a module “abc” and then try to import it, but by doing so Python imports the module containing the ABC class instead of your local file. This could cause some confusion – why does such a common name as “abc” conflict with my simple module “abc”?
+
+Run your own experiment to become familiar with the error messages you would encounter in such a situation.
+"""
