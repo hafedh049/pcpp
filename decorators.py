@@ -446,3 +446,34 @@ print(car1.vin, car1.brand)
 print(car2.vin, car2.brand)
 
 # ------------------------------------------------------------------
+
+"""
+Static methods
+Static methods are methods that do not require (and do not expect!) a parameter indicating the class object or the class itself in order to execute their code.
+
+When can it be useful?
+
+When you need a utility method that comes in a class because it is semantically related, but does not require an object of that class to execute its code;
+consequently, when the static method does not need to know the state of the objects or classes.
+Convention
+
+To be able to distinguish a static method from a class method or instance method, the programmer signals it with the @staticmethod decorator preceding the class method definition.
+Static methods do not have the ability to modify the state of objects or classes, because they lack the parameters that would allow this.
+
+"""
+
+
+class Bank_Account:
+    def __init__(self, iban):
+        print("__init__ called")
+        self.iban = iban
+
+    @staticmethod
+    def validate(iban):
+        if len(iban) == 20:
+            return True
+        else:
+            return False
+
+
+# ---------------------------------------------------------------------------
