@@ -219,3 +219,12 @@ for element in (device, radio, portableRadio, tvset):
     element.turn_on()
 
 """
+
+"""
+Summary:
+
+polymorphism is used when different class objects share conceptually similar methods (but are not always inherited)
+polymorphism leverages clarity and expressiveness of the application design and development;
+when polymorphism is assumed, it is wise to handle exceptions that could pop up.
+
+"""
