@@ -300,3 +300,38 @@ pack_books('Alice in Wonderland', 'Winnie the Pooh')
 pack_toys('doll', 'car')
 pack_fruits('plum', 'pear')
 """
+
+
+"""
+Decorators with arguments
+Another previously discussed snippet showed that decorators can accept arguments:
+
+def warehouse_decorator(material):
+    def wrapper(our_function):
+        def internal_wrapper(*args):
+            print('
+* Wrapping items from {} with {}'.format(our_function.__name__, material))
+            our_function(*args)
+            print()
+        return internal_wrapper
+    return wrapper
+@warehouse_decorator('kraft')
+def pack_books(*args):
+    print("We'll pack books:", args)
+
+And this code could be transcribed to a decorator expressed as a class, presented in the right pane.
+
+When you pass arguments to the decorator, the decorator mechanism behaves quite differently than presented in example of decorator that does not accept arguments (previous slide):
+
+the reference to function to be decorated is passed to __call__ method which is called only once during decoration process,
+the decorator arguments are passed to __init__ method
+"""
+
+"""
+Class decorators
+Class decorators strongly refer to function decorators, because they use the same syntax and implement the same concepts.
+
+Instead of wrapping individual methods with function decorators, class decorators are ways to manage classes or wrap special method calls into additional logic that manages or extends instances that are created.
+
+If we consider syntax, class decorators appear just before the 'class' instructions that begin the class definition (similar to function decorators, they appear just before the function definitions).
+"""
