@@ -509,3 +509,33 @@ Furthermore, a class which contains one or more abstract methods is called an ab
 What is an abstract method?
 An abstract method is a method that has a declaration, but does not have any implementation. We'll give some examples of such methods to emphasize their abstract nature.
 """
+
+# -----------------------------------------------------------------------------------------
+"""
+Python has come up with a module which provides the helper class for defining Abstract Base Classes (ABC) and that module name is abc.
+
+The ABC allows you to mark classes as abstract ones and distinguish which methods of the base abstract class are abstract. A method becomes abstract by being decorated with an @abstractmethod decorator.
+
+To start with ABC you should:
+
+import the abc module;
+make your base class inherit the helper class ABC, which is delivered by the abc module;
+decorate abstract methods with @abstractmethod, which is delivered by the abc module.
+When you run the code, the output doesn’t surprise anyone:
+"""
+import abc
+
+
+class BluePrint(abc.ABC):
+    @abc.abstractmethod
+    def hello(self):
+        pass
+
+
+class GreenField(BluePrint):
+    def hello(self):
+        print("Welcome to Green Field!")
+
+
+gf = GreenField()
+gf.hello()
