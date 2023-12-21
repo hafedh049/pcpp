@@ -477,3 +477,12 @@ class Bank_Account:
 
 
 # ---------------------------------------------------------------------------
+"""
+Using static and class methods - comparison
+The time has come to compare the use of class and static methods:
+
+a class method requires 'cls' as the first parameter and a static method does not;
+a class method has the ability to access the state or methods of the class, and a static method does not;
+a class method is decorated by '@classmethod' and a static method by '@staticmethod';
+a class method can be used as an alternative way to create objects, and a static method is only a utility method.
+"""
