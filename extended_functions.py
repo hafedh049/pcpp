@@ -21,5 +21,20 @@ If you’ve ever programmed in the C or C++ languages, then you should remember 
 """
 
 """
+The last example in this section shows how to combine *args, a key word, and **kwargs in one definition:
 
+def combiner(a, b, *args, c=20, **kwargs):
+    super_combiner(c, *args, **kwargs)
+def super_combiner(my_c, *my_args, **my_kwargs):
+    print('my_args:', my_args)
+    print('my_c:', my_c)
+    print('my_kwargs', my_kwargs)
+combiner(1, '1', 1, 1, c=2, argument1=1, argument2='1')
+
+
+Result:
+
+my_args: (1, 1)
+my_c: 2
+my_kwargs {'argument1': 1, 'argument2': '1'}
 """
