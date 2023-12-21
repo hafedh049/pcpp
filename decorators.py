@@ -395,3 +395,6 @@ print(Example.get_internal())
 
 example2 = Example(99)
 print(Example.get_internal())
+
+
+"An exception is the __init__() method, which by definition is an instance method, so it can’t use “cls”, and as a result it references the class variable by the “Example” prefix."
