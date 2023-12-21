@@ -175,3 +175,5 @@ DRAW THE DFS AND APPLY THE DIAMOND
 """
 
 "https://www.youtube.com/watch?v=PSMYqfMP3Cs"
+
+"ki tebda fama base class 9bal el sub classes el MRO will fail w ki yibda e5er item houwa el base class fa famch mochkla, print(A.mro()) wila A.__mro__ new method(C3 linearization = left to right the go deeper, old method DFS(go deeper then left to right))"
