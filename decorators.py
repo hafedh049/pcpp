@@ -486,3 +486,26 @@ a class method has the ability to access the state or methods of the class, and 
 a class method is decorated by '@classmethod' and a static method by '@staticmethod';
 a class method can be used as an alternative way to create objects, and a static method is only a utility method.
 """
+
+# --------------------------------------------------------------------------------
+
+"""
+Abstract classes
+Python is considered to be a very flexible programming language, but that doesn’t mean that there are no controls to impose a set of functionalities or an order in a class hierarchy. When you develop a system in a group of programmers, it would be useful to have some means of establishing requirements for classes in matters of interfaces (methods) exposed by each class.
+
+What is an abstract class?
+An abstract class should be considered a blueprint for other classes, a kind of contract between a class designer and a programmer:
+
+the class designer sets requirements regarding methods that must be implemented by just declaring them, but not defining them in detail. Such methods are called abstract methods.
+The programmer has to deliver all method definitions and the completeness would be validated by another, dedicated module. The programmer delivers the method definitions by overriding the method declarations received from the class designer.
+
+This contract assures you that a child class, built upon your abstract class, will be equipped with a set of concrete methods imposed by the abstract class.
+
+Why do we want to use abstract classes?
+The very important reason is: we want our code to be polymorphic, so all subclasses have to deliver a set of their own method implementations in order to call them by using common method names.
+
+Furthermore, a class which contains one or more abstract methods is called an abstract class. This means that abstract classes are not limited to containing only abstract methods – some of the methods can already be defined, but if any of the methods is an abstract one, then the class becomes abstract.
+
+What is an abstract method?
+An abstract method is a method that has a declaration, but does not have any implementation. We'll give some examples of such methods to emphasize their abstract nature.
+"""
