@@ -371,3 +371,27 @@ As with self, cls was chosen arbitrarily (i.e., you can use a different name, bu
 
 
 """
+
+
+class Example:
+    __internal_counter = 0
+
+    def __init__(self, value):
+        Example.__internal_counter += 1
+
+    @classmethod
+    def get_internal(cls):
+        return "# of objects created: {}".format(cls.__internal_counter)
+
+    def get_internal(self):
+        ...
+        "instance method ti8lb el class method ki tibda nafs el method(ism)"
+
+
+print(Example.get_internal())
+
+example1 = Example(10)
+print(Example.get_internal())
+
+example2 = Example(99)
+print(Example.get_internal())
