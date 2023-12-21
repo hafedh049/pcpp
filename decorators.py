@@ -348,3 +348,26 @@ Interesting note:
 
 the idea of decorators was described in two documents – PEP 318 and PEP 3129. Don't be discouraged that the first PEP was prepared for Python 2, because what matters here is the idea, not the implementation in a specific Python.
 """
+
+"""
+The name of the parameter self was chosen arbitrarily and you can use a different word, but you must do it consistently in your code. It follows from the convention that self literally means a reference to the instance.
+"""
+# ----------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+Class methods
+Class methods are methods that, like class variables, work on the class itself, and not on the class objects that are instantiated. You can say that they are methods bound to the class, not to the object.
+
+When can this be useful?
+
+There are several possibilities, here are the two most popular:
+
+we control access to class variables, e.g., to a class variable containing information about the number of created instances or the serial number given to the last produced object, or we modify the state of the class variables;
+we need to create a class instance in an alternative way, so the class method can be implemented by an alternative constructor.
+Convention
+
+To be able to distinguish a class method from an instance method, the programmer signals it with the @classmethod decorator preceding the class method definition.
+Additionally, the first parameter of the class method is cls, which is used to refer to the class methods and class attributes.
+As with self, cls was chosen arbitrarily (i.e., you can use a different name, but you must do it consistently).
+
+
+"""
