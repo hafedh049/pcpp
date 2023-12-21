@@ -27,3 +27,11 @@ But as it is a very serious process, you should be sure that all checks are pass
 """
 
 # -------------------------------------------
+"""
+Advanced exceptions - the traceback attribute
+Each exception object owns a __traceback__ attribute.
+
+Python allows us to operate on the traceback details because each exception object (not only chained ones) owns a __traceback__ attribute.
+"""
+
+# --------------------------------------------
