@@ -169,3 +169,25 @@ pack_fruits("plum", "pear")
 
 
 "https://www.youtube.com/watch?v=WpF6azYAxYg"
+
+
+"""
+Decorator stacking
+Python allows you to apply multiple decorators to a callable object (function, method or class).
+
+The most important thing to remember is the order in which the decorators are listed in your code, because it determines the order of the executed decorators. When your function is decorated with multiple decorators:
+
+@outer_decorator
+@inner_decorator
+def function():
+    pass
+
+abcd = subject_matter_function()
+
+
+the call sequence will look like the following:
+
+the outer_decorator is called to call the inner_decorator, then the inner_decorator calls your function;
+when your function ends it execution, the inner_decorator takes over control, and after it finishes its execution, the outer_decorator is able to finish its job.
+This routing mimics the classic stack concept.
+"""
