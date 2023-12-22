@@ -137,3 +137,46 @@ Hence, your role is to ensure that the environment where the class or function i
 
 Otherwise, an AtrributeError exception will be raised.
 """
+
+# --------------------------------------------------
+
+import pickle
+
+
+def f1():
+    print("Hello from the jar!")
+
+
+with open("function.pckl", "wb") as file_out:
+    pickle.dump(f1, file_out)
+
+with open("function.pckl", "rb") as file_in:
+    data = pickle.load(file_in)
+
+print(type(data))
+print(data)
+data()
+
+"""
+The following code demonstrates the situation for function definition pickling:
+
+import pickle
+
+def f1():
+    print('Hello from the jar!')
+
+with open('function.pckl', 'wb') as file_out:
+    pickle.dump(f1, file_out)
+
+
+We see no errors, so we might conclude that f1() was pickled successfully, and now we can retrieve it from the file.
+
+Run the code in the editor and see what happens.
+
+Unfortunately, the result proves that no code was persisted:
+
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    data = pickle.load(file_in)
+AttributeError: Can't get attribute 'f1' on <module '__main__' from 'main.py'>
+"""
