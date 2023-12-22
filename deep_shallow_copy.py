@@ -113,3 +113,17 @@ The 'copy' module contains a function for shallow copying: copy(). Of course, yo
 
 But think about making use of polymorphism when you need a universal function to copy any type object, so that in that case using a copy() function is the smart way to accomplish the task.
 """
+
+"""
+In the following example, we'll compare the performance of three ways of copying a large compound object (a million three-element tuples).
+
+The first approach is a simple reference copy. This is done very quickly, as there’s nearly nothing to be done by the CPU – just a copy of a reference to 'a_list'.
+
+The second approach is a shallow copy. This is slower than the previous code, as there are 1,000,000 references (not objects) created.
+
+The third approach is a deep copy. This is the most comprehensive operation, as there are 3,000,000 objects created.
+
+Test it locally on your computer.
+"""
+
+# The same deepcopy() method could be utilized when you want to copy dictionaries or custom class objects.
