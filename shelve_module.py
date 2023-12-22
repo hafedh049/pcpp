@@ -68,3 +68,28 @@ print(new_shelve['USD'])
 new_shelve.close()
 
 """
+
+
+"""
+You should treat a shelve object as a Python dictionary, with a few additional notes:
+
+the keys must be strings;
+Python puts the changes in a buffer which is periodically flushed to the disk. To enforce an immediate flush, call the sync() method on your shelve object;
+when you call the close() method on an shelve object, it also flushes the buffers.
+When you treat a shelve object like a Python dictionary, you can make use of the dictionary utilities:
+
+the len() function;
+the in operator;
+the keys() anditems() methods;
+the update operation, which works the same as when applied to a Python dictionary;
+the del instruction, used to delete a key-value pair.
+
+After running the code, you'll notice additionally that some files are created to support the database. Don’t try to alter those files with external utilities, because your shelve may become inconsistent, resulting in read/write errors.
+
+The use of shelve is really easy and effective. Moreover, you should know that you could simulate the shelve by pickling the whole dictionary, but the shelve module uses the memory more efficiently, so whenever you need access to pickled objects, employ a shelve.
+
+And the final remark is:
+
+because the shelve module is backed by pickle, it isn’t safe to load a shelve from an untrusted source. As with pickle, loading a shelve can execute arbitrary code.
+
+"""
