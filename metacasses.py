@@ -125,3 +125,34 @@ The results are:
 a is <class 'str'> <class 'str'>
 True is <class 'bool'> <class 'bool'>
 """
+
+# ---------------------------------------
+
+Dog = type("Dog", (), {})
+
+print("The class name is:", Dog.__name__)
+print("The class is an instance of:", Dog.__class__)
+print("The class is based on:", Dog.__bases__)
+print("The class attributes are:", Dog.__dict__)
+
+
+"""
+When the type() function is called with three arguments, then it dynamically creates a new class.
+
+For the invocation of type(, , ):
+
+the argument specifies the class name; this value becomes the __name__ attribute of the class;
+the argument specifies a tuple of the base classes from which the newly created class is inherited; this argument becomes the __bases__ attribute of the class;
+the argument specifies a dictionary containing method definitions and variables for the class body; the elements of this argument become the __dict__ attribute of the class and state the class namespace.
+A very simple example, when both bases and dictionary are empty, is presented in the right pane.
+
+Dog = type('Dog', (), {})
+
+print('The class name is:', Dog.__name__)
+print('The class is an instance of:', Dog.__class__)
+print('The class is based on:', Dog.__bases__)
+print('The class attributes are:', Dog.__dict__)
+
+
+As a result, we have created the simple class “Dog”.
+"""
