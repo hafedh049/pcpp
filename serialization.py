@@ -144,6 +144,8 @@ import pickle
 
 
 def f1():
+    a = 5
+    print(a)
     print("Hello from the jar!")
 
 
