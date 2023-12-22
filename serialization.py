@@ -192,3 +192,29 @@ However, it's important to note that this behavior may not be consistent across 
 
 While it might work in certain situations, using pickle for complex functions or those that rely on specific environments or context is generally not recommended as it might lead to unexpected behavior or errors. Serializing functions with pickle can be a bit fragile when it comes to retaining the exact original behavior after deserialization.
 """
+
+from os import system
+
+system("cls")
+
+
+class Cucumber:
+    def __init__(self):
+        self.size = "small"
+
+    def get_size(self):
+        return self.size
+
+
+cucu = Cucumber()
+
+with open("cucumber.pckl", "wb") as file_out:
+    pickle.dump(cucu, file_out)
+
+with open("cucumber.pckl", "rb") as file_in:
+    data = pickle.load(file_in)
+
+print(type(data))
+print(data)
+print(data.size)
+print(data.get_size())
