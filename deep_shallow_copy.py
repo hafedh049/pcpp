@@ -44,7 +44,49 @@ In fact, two distinct objects holding the same values could be compared, and the
 To check whether both operands refer to the same object or not, you should use the 'is' operator. In other words, it responds to the question: “Are both variables referring to the same identity?”
 """
 
+# -------------------------------------------------------------
+
+print("Part 1")
+print("Let's make a copy")
+a_list = [10, "banana", [997, 123]]
+b_list = a_list[:]
+print("a_list contents:", a_list)
+print("b_list contents:", b_list)
+print("Is it the same object?", a_list is b_list)
+
+print()
+print("Part 2")
+print("Let's modify b_list[2]")
+b_list[2][0] = 112
+print("a_list contents:", a_list)
+print("b_list contents:", b_list)
+print("Is it the same object?", a_list is b_list)
+
 
 """
+When you process the data, you’ll come to the point where you may want to have distinct copies of objects that you can modify without automatically modifying the original at the same time.
 
+Let's have a look at the following code. Its intention is to:
+
+make a real, independent copy of a_list, (not just a copy reference). Using [:], which is an array slice syntax, we get a fresh copy of the a_list object;
+modify the original object;
+see the contents of both objects.
+Pay attention to the code presented in the right pane, of which a_list is a compound object (an object that contains other objects, like lists, dictionaries, or class instances).
+
+When you run the code, you get the following output:
+
+Part 1
+Let's make a copy
+a_list contents: [10, 'banana', [997, 123]]
+b_list contents: [10, 'banana', [997, 123]]
+Is it the same object? False
+
+Part 2
+Let's modify b_list[2]
+a_list contents: [10, 'banana', [112, 123]]
+b_list contents: [10, 'banana', [112, 123]]
+Is it the same object? False
+output
+
+So, despite the fact that b_list is a copy of a_list, modifying b_list results in a modification of the a_list object.
 """
