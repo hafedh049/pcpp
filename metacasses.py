@@ -88,3 +88,40 @@ type is a class that generates classes defined by a programmer;
 metaclasses are subclasses of the type class.
 Before we start creating our own metaclasses, it’s important to understand some more details regarding classes and the process of creating them.
 """
+
+"""
+We should get familiar with some special attributes:
+
+__name__ – inherent for classes; contains the name of the class;
+__class__ – inherent for both classes and instances; contains information about the class to which a class instance belongs;
+__bases__ – inherent for classes; it’s a tuple and contains information about the base classes of a class;
+__dict__ – inherent for both classes and instances; contains a dictionary (or other type mapping object) of the object's attributes.
+The output of the code presented in the right pane:
+
+"dog" is an object of class named: Dog
+
+class "Dog" is an instance of: <class 'type'>
+instance "dog" is an instance of: <class '__main__.Dog'>
+
+class "Dog" is   (<class 'object'>,)
+
+class "Dog" attributes: {'__module__': '__main__', '__dict__': <attribute '__dict__' of 'Dog' objects>, '__weakref__': <attribute '__weakref__' of 'Dog' objects>, '__doc__': None}
+
+object "dog" attributes: {}
+"""
+
+# ------------------------------------------------
+
+"""
+The same information stored in __class__could be retrieved by calling a type() function with one argument:
+
+for element in (1, 'a', True):
+    print(element, 'is', element.__class__, type(element))
+
+
+The results are:
+
+1 is <class 'int'> <class 'int'>
+a is <class 'str'> <class 'str'>
+True is <class 'bool'> <class 'bool'>
+"""
