@@ -182,3 +182,13 @@ Traceback (most recent call last):
     data = pickle.load(file_in)
 AttributeError: Can't get attribute 'f1' on <module '__main__' from 'main.py'>
 """
+
+"""
+If the function f() that you described (f(): print(5)) successfully pickles, unpickles, and executes without errors, that behavior may vary depending on the Python version and environment you're using.
+
+In some cases, Python might handle simple functions like the one you've mentioned, which contain basic expressions, and successfully pickle and unpickle them without raising errors.
+
+However, it's important to note that this behavior may not be consistent across all Python versions or in more complex scenarios involving functions that reference variables or resources from an external context.
+
+While it might work in certain situations, using pickle for complex functions or those that rely on specific environments or context is generally not recommended as it might lead to unexpected behavior or errors. Serializing functions with pickle can be a bit fragile when it comes to retaining the exact original behavior after deserialization.
+"""
