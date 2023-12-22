@@ -156,3 +156,49 @@ print('The class attributes are:', Dog.__dict__)
 
 As a result, we have created the simple class “Dog”.
 """
+
+# --------------------------------------------------------
+
+
+def bark(self):
+    print("Woof, woof")
+
+
+class Animal:
+    def feed(self):
+        print("It is feeding time!")
+
+
+Dog = type("Dog", (Animal,), {"age": 0, "bark": bark})
+
+print("The class name is:", Dog.__name__)
+print("The class is an instance of:", Dog.__class__)
+print("The class is based on:", Dog.__bases__)
+print("The class attributes are:", Dog.__dict__)
+
+doggy = Dog()
+doggy.feed()
+doggy.bark()
+
+"""
+The more complex example that dynamically creates a fully functional class is presented in the right pane.
+
+As you can see, the Dog class is now equipped with two methods (feed() and bark()) and the instance attribute age.
+
+The class name is: Dog
+The class is an instance of: <class 'type'>
+The class is based on: (<class '__main__.Animal'>,)
+The class attributes are: {'age': 0, 'bark': <function bark at 0x00000180C43E4E58>, '__module__': '__main__', '__doc__': None}
+It is feeding time!
+Woof, woof
+output
+
+
+This way of creating classes, using the type function, is substantial for Python's way of creating classes using the class instruction:
+
+after the class instruction has been identified and the class body has been executed, the class = type(, , ) code is executed;
+the type is responsible for calling the __call__ method upon class instance creation; this method calls two other methods:
+__new__(), responsible for creating the class instance in the computer memory; this method is run before __init__();
+__init__(), responsible for object initialization.
+Metaclasses usually implement these two methods (__init__, __new__), taking control of the procedure of creating and initializing a new class instance. Classes receive a new layer of logic.
+"""
