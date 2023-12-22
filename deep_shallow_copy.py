@@ -90,3 +90,20 @@ output
 
 So, despite the fact that b_list is a copy of a_list, modifying b_list results in a modification of the a_list object.
 """
+
+"""
+The explanation of the behavior presented on the previous page is:
+
+the 'a_list' object is a compound object;
+we’ve run a shallow copy that constructs a new compound object, b_list in our example, and then populated it with references to the objects found in the original;
+as you can see, a shallow copy is only one level deep. The copying process does not recurse and therefore does not create copies of the child objects, but instead populates b_list with references to the already existing objects.
+"""
+
+"""
+
+If you want to make an independent copy of a compound object (list, dictionary, custom class instance) you should make use of deep copy, which:
+
+constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original;
+takes more time to complete, as there are many more operations to be performed;
+is implemented by the deepcopy() function, delivered by the python 'copy' module
+"""
