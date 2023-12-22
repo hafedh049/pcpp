@@ -202,3 +202,8 @@ __new__(), responsible for creating the class instance in the computer memory; t
 __init__(), responsible for object initialization.
 Metaclasses usually implement these two methods (__init__, __new__), taking control of the procedure of creating and initializing a new class instance. Classes receive a new layer of logic.
 """
+
+
+"""
+
+"""
