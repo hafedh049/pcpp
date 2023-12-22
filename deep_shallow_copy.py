@@ -31,6 +31,8 @@ When you have two variables referring to the same object, the return values of t
 
 
 """
+(Memory Chunks)
+
 What is the difference between the '==' and 'is' operators?
 
 What should you do to compare two objects?
@@ -40,4 +42,9 @@ In order to compare two objects, you should start with the '==' operator as usua
 In fact, two distinct objects holding the same values could be compared, and the result would be 'True'. Moreover, when you compare two variables referencing the same object, the result would be also 'True'.
 
 To check whether both operands refer to the same object or not, you should use the 'is' operator. In other words, it responds to the question: “Are both variables referring to the same identity?”
+"""
+
+
+"""
+
 """
