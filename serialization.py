@@ -117,3 +117,23 @@ At the beginning of the serialization module, we mentioned that serialized objec
 pickle.dumps(object_to_be_pickled) – expects an initial object, returns a byte object. This byte object should be passed to a database or network driver to persist the data;
 pickle.loads(bytes_object) – expects the bytes object, returns the initial object.
 """
+
+# ---------------------------------------------
+
+
+"""
+Remember that attempts to pickle non-pickleable objects will raise the PicklingError exception.
+
+Trying to pickle a highly recursive data structure (mind the cycles) may exceed the maximum recursion depth, and a RecursionError exception will be raised in such cases.
+
+Note that functions (both built-in and user-defined) are pickled by their name reference, not by any value. This means that only the function name is pickled; neither the function’s code, nor any of its function attributes, are pickled.
+
+Similarly, classes are pickled by named reference, so the same restrictions in the unpickling environment apply. Note that none of the class’s code or data are pickled.
+
+
+This is done on purpose, so you can fix bugs in a class or add methods to the class, and still load objects that were created with an earlier version of the class.
+
+Hence, your role is to ensure that the environment where the class or function is unpickled is able to import the class or function definition. In other words, the function or class must be available in the namespace of your code reading the pickle file.
+
+Otherwise, an AtrributeError exception will be raised.
+"""
