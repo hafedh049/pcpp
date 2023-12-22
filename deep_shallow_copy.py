@@ -127,3 +127,54 @@ Test it locally on your computer.
 """
 
 # The same deepcopy() method could be utilized when you want to copy dictionaries or custom class objects.
+
+import copy
+
+
+class Example:
+    def __init__(self):
+        self.properties = ["112", "997"]
+        print("Hello from __init__()")
+
+
+a_example = Example()
+b_example = copy.deepcopy(a_example)
+print("Memory chunks:", id(a_example), id(b_example))
+print("Same memory chunk?", a_example is b_example)
+print()
+print("Let's modify the movies list")
+b_example.properties.append("911")
+print("a_example.properties:", a_example.properties)
+print("b_example.properties:", b_example.properties)
+
+
+"""
+The code in the editor copies the dictionary in a safe manner.
+
+Run it to get the following output:
+
+Deep copy
+Hello from __init__()
+Memory chunks: 43986504 43986696
+Same memory chunk? False
+
+Let's modify the movies list
+a_example.properties: ['112', '997']
+b_example.properties: ['112', '997', '911']
+output
+
+Pay attention to the fact that the __init__() method is executed only once, despite the fact we own two instances of the example class.
+
+This method is not executed for the b_example object as the deepcopy function copies an already initialized object.
+"""
+
+
+"""
+Section summary
+Important things to remember:
+
+the deepcopy() method creates and persists new instances of source objects, whereas any shallow copy operation only stores references to the original memory address;
+a deep copy operation takes significantly more time than any shallow copy operation;
+the deepcopy() method copies the whole object, including all nested objects; it’s an example of practical recursion taking place;
+deep copy might cause problems when there are cyclic references in the structure to be copied.
+"""
