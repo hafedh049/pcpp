@@ -16,6 +16,4 @@ Tim Peters, the Python guru who authored the Zen of Python, expressed his feelin
 [metaclasses] are deeper magic than 99% of users should ever worry about. If you wonder whether you need them, you don't (the people who actually need them know with certainty that they need them, and don't need an explanation about why).
 
 Don’t worry, we'll touch on the “deeper magic” in a benign way. Understanding Python metaclasses is worthwhile, because it leads to a better understanding of what is happening under Python's hood when classes are created.
-
-
 """
